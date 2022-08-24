@@ -1,6 +1,6 @@
 pragma solidity ^0.8.15; //defines the version of solidity to be used
 
-contract inbox {
+contract SetterGetter {
     uint number;
 
     function set(uint num) public {
