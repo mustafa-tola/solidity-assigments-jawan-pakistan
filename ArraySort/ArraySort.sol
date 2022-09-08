@@ -2,14 +2,14 @@
 pragma solidity >=0.5.0 <0.9.0;
 
 contract ArraySort {
-   function sort(uint[] memory array,int length) public pure returns(uint[] memory) {
+   function sort(uint[] memory array,uint length) public pure returns(uint[] memory) {
         uint temp;
         uint temp1;
         uint ind;
-        for(int i = 0;i < length;i++) {
+        for(uint i = 0;i < length;i++) {
             temp = uint(array[i]);
             ind = i;
-            for(int j = i + 1;j < length;j++) {
+            for(uint j = i + 1;j < length;j++) {
                 if(array[j] < temp) {
                     temp = uint(array[j]);
                     ind = j;
