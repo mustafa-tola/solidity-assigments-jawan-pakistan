@@ -12,13 +12,13 @@ contract Voting {
         parties["PPP"] = 0;
     }
 
-    function setVoterStatus(address voter,bool status) public {
+    function setVoterStatus(address voter) public {
         require(owner == msg.sender,"You are not an admin");
-        blacklistedVoters[voter] = status;
+        blacklistedVoters[voter] = false;
     }
 
     function votePti() public {
-        require(blacklistedVoters[msg.sender] == true,"You can not vote");
+        require(blacklistedVoters[msg.sender] == false,"You can not vote");
         parties["PTI"] += 1;
     }
 
